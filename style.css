@@ -1,0 +1,105 @@
+body {
+  font-family: sans-serif;
+  direction: rtl;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 750px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+canvas {
+  margin-top: 30px;
+  max-width: 100%;
+}
+
+#monthlyTotal {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+}
+
+/* ⭐ تنسيق خاص للطباعة */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .print-section, .print-section * {
+    visibility: visible;
+  }
+
+  .print-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: white;
+    padding: 20px;
+  }
+
+  button, form {
+    display: none !important;
+  }
+
+  canvas {
+    margin-top: 0;
+  }
+
+  #expensesTable {
+    margin-top: 10px;
+  }
+
+  #monthlyTotal {
+    margin-top: 15px;
+  }
+}
